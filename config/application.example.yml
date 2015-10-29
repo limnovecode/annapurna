@@ -1,0 +1,45 @@
+# config/application.example.yml
+
+# Using the figaro command, you can set values:
+# figaro heroku:set -e production -a annapurna-development
+# figaro heroku:set -e production -a annapurna-staging
+# figaro heroku:set -e production -a annapurna-production
+
+# For more information:
+# figaro help heroku:set
+
+# Add configuration values here, as shown below.
+
+# S3 [https://aws.amazon.com/s3/]
+# config/initializers/carrierwave.rb
+STORAGE_REGION: "xxxxxxxx"
+STORAGE_ACCESS_KEY_ID: "xxxxxxxxxxxxxxxxxxxxxx"
+STORAGE_SECRET_ACCESS_KEY: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# Mailgun [https://www.mailgun.com/]
+# config/initializers/transactional_email.rb
+TE_DOMAIN: "xxxxxxxxxxxxxxxxxxxxxx"
+TE_USER_NAME: "xxxxxxxxxxxxxxxxxxxxxx"
+TE_PASSWORD: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+#################################################################
+
+default: &default
+  APP_NAME: "Annapurna"
+  TIME_ZONE: "London"
+  COOKIE_SESSION: "_annapurna_session"
+
+# You can generate a new secret key by running the following shell command: "rake secret"
+test:
+  <<: *default
+  DATABASE_NAME: "annapurna_test"
+  SECRET_KEY_BASE: "c7b225033c2835eb5893e0576bffff077b6d322ebc3eb65fbf9ddaf8ea2f966290a05e2599e0f27ffe07a2c22d923dc0a260b1b539782c465902c727d8476ab9"
+
+development:
+  <<: *default
+  DATABASE_NAME: "annapurna_development"
+  SECRET_KEY_BASE: "b29acce458d3ff98b165454669111450c09e21b4541c014426111c662a1e646f503fe5bdae07bb200179c70c07ee48609c7e9295ec32a18fd89d5103b3377526"
+
+production:
+  <<: *default
+  LANG: "en_GB.UTF-8"

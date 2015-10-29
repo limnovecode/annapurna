@@ -1,0 +1,21 @@
+# config/figaro/production.yml
+
+# Using the figaro command, you can set
+# values from your configuration file all at once.
+# figaro heroku:set -e production -a annapurna-production -p config/figaro/production.yml
+
+# For more information:
+# figaro help heroku:set
+
+# Add configuration values here, as shown below.
+
+# We have separated these variables from "config/application.yml" due to specific Heroku settings.
+# We use Pipelines to manage and deploy our apps.
+# this is a great way to manage multiple environments and have different settings for each.
+
+# Asset Host
+ASSET_HOST: "http://assets.lim9.com"
+
+# Skylight [https://www.skylight.io/]
+# config/skylight.yml
+SKYLIGHT_AUTHENTICATION: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
