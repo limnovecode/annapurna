@@ -1,6 +1,6 @@
-# model/concerns/adminboard/slug_generator.rb
+# model/concerns/slug_generator.rb
 
-module Adminboard::SlugGenerator
+module SlugGenerator
   extend ActiveSupport::Concern
 
   # Slug Algorithm

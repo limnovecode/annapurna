@@ -7,7 +7,7 @@ module Adminboard::AuthTokenGenerator
   def generate_auth_token
     loop do
       self.authentication_token = Digest::SHA2.hexdigest("#{Time.now}").first(32)
-      break unless Admin.exists?(authentication_token: authentication_token)
+      break unless Administrator.exists?(authentication_token: authentication_token)
     end
   end
 end

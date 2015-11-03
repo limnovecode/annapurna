@@ -1,6 +1,6 @@
-# model/concerns/adminboard/clean_video.rb
+# model/concerns/clean_video.rb
 
-module Adminboard::CleanVideo
+module CleanVideo
   extend ActiveSupport::Concern
 
   # Split Vimeo ID
