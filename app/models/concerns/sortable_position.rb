@@ -1,6 +1,6 @@
-# model/concerns/adminboard/sortable_position.rb
+# model/concerns/sortable_position.rb
 
-module Adminboard::SortablePosition
+module SortablePosition
   extend ActiveSupport::Concern
 
   module ClassMethods

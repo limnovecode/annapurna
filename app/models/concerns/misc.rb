@@ -1,6 +1,6 @@
-# model/concerns/adminboard/misc.rb
+# model/concerns/misc.rb
 
-module Adminboard::Misc
+module Misc
   extend ActiveSupport::Concern
 
   included do

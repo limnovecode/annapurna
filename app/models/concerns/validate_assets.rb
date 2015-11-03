@@ -1,6 +1,6 @@
-# model/concerns/adminboard/validate_assets.rb
+# model/concerns/validate_assets.rb
 
-module Adminboard::ValidateAssets
+module ValidateAssets
   extend ActiveSupport::Concern
 
   included do
