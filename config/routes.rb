@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   namespace :adminboard do
     root to: "home#show"
     resource :home
+    resources :legal
     resource :branding
   end
 end
