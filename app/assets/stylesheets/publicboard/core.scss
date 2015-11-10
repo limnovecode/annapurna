@@ -1,10 +1,10 @@
-// app/assets/stylesheets/core.scss
+// app/assets/stylesheets/publicboard/core.scss
 
 //
 //  MUST STAY ON HIGHER LEVEL
 //
 
-@import "partials/colors";
+@import "publicboard/partials/colors";
 @import "neutralize";
 @import "prefixes";
 @import "floats";
@@ -49,4 +49,4 @@ body {
 //  MUST STAY ON LOWER LEVEL
 //
 
-@import "partials/mediaQueries";
+@import "publicboard/partials/mediaQueries";

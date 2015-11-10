@@ -1,3 +1,5 @@
+-# app/views/adminboard/administrators/_form.html.haml
+
 = form_for([:adminboard, @administrator]) do |f|
   - if @administrator.errors.any?
     #error_explanation
@@ -19,4 +21,4 @@
     = f.label :sudo
     = f.check_box :sudo
   .actions
-    = f.submit 'Save'
+    = f.submit "Save"

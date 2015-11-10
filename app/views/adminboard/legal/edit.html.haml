@@ -1,7 +1,9 @@
+-# app/views/adminboard/legal/edit.html.haml
+
 %h1 Editing legal
 
-= render 'form'
+= render "form"
 
-= link_to 'Show', [:adminboard, @legal]
-\|
-= link_to 'Back', adminboard_legal_index_path
+= link_to "Show", [:adminboard, @legal]
+
+= link_to "Back", adminboard_legal_index_path

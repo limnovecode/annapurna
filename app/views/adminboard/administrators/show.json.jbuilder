@@ -1,1 +1,0 @@
-json.extract! @administrator, :slug, :email, :password_digest, :authentication_token, :reset_password_token, :reset_password_sent_at, :sudo, :created_at, :updated_at

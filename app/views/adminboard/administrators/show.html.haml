@@ -1,4 +1,4 @@
-%p#notice= notice
+-# app/views/adminboard/administrators/show.html.haml
 
 %p
   %b Slug:
@@ -22,6 +22,6 @@
   %b Sudo:
   = @administrator.sudo
 
-= link_to 'Edit', edit_adminboard_administrator_path(@administrator)
-\|
-= link_to 'Back', adminboard_administrators_path
+= link_to "Edit", edit_adminboard_administrator_path(@administrator)
+
+= link_to "Back", adminboard_administrators_path

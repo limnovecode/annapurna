@@ -1,17 +1,18 @@
 # config/routes.rb
 
 Rails.application.routes.draw do
-  namespace :adminboard do
-    resources :administrators
+
+  scope module: "publicboard" do
+    root to: "home#show"
+    resource :home
   end
-  root to: "home#show"
-  resource :home
 
   namespace :adminboard do
     root to: "home#show"
     resource :home
-    resources :legal
     resource :branding
+    resources :legal
+    resources :administrators
     resources :sessions, only: [:new, :create, :destroy]
     resources :password_resets, except: [:show, :destroy, :index]
     get "login", to: "sessions#new", as: "login"

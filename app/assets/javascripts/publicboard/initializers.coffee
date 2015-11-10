@@ -1,4 +1,4 @@
-# app/assets/javascripts/initializes.coffee
+# app/assets/javascripts/publicboard/initializes.coffee
 
 $(window).load ->
   $.setLoadPage()

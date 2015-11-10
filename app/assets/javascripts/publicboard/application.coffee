@@ -1,4 +1,4 @@
-# app/assets/javascripts/application.coffee
+# app/assets/javascripts/publicboard/application.coffee
 
 # This is a manifest file that'll be compiled into application.js,
 # which will include all the files listed below.
@@ -20,5 +20,5 @@
 #= require fit
 #= require row
 #= require anchor
-#= require initializers
+#= require publicboard/initializers
 #= require turbolinks

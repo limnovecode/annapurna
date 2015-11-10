@@ -9,21 +9,29 @@ class Adminboard::PasswordResetsController < AdminboardController
   end
 
   def create
-    @administrator = Administrator.find_by_email!(params[:email])
-    @administrator.send_reset_password if @administrator
-    redirect_to adminboard_root_path
+    if @administrator = Administrator.find_by_email(params[:email])
+      @administrator.send_reset_password
+      flash[:success] = "An email has been sent with further instructions in order to reset your password."
+      redirect_to adminboard_login_path
+    else
+      flash[:failure] = "Oops. Something went wrong."
+      redirect_to adminboard_login_path
+    end
   end
 
   def edit
   end
 
   def update
-    if @administrator.reset_password_sent_at < 6.hours.ago
-      redirect_to adminboard_root_path
+    if @administrator.reset_password_sent_at < 2.hours.ago
+      flash[:failure] = "Oops. Something went wrong."
+      redirect_to adminboard_login_path
     elsif @administrator.update_attributes(administrator_params)
-      redirect_to adminboard_root_path
+      flash[:success] = "Your password was successfully updated."
+      redirect_to adminboard_login_path
     else
-      redirect_to edit_adminboard_password_reset_path
+      flash[:failure] = "Oops. Something went wrong."
+      redirect_to adminboard_login_path
     end
   end
 

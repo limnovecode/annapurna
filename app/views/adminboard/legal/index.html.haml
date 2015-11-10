@@ -1,3 +1,5 @@
+-# app/views/adminboard/legal/index.html.haml
+
 %h1 Listing legal
 
 %table
@@ -12,10 +14,10 @@
     %tr
       %td= legal.title
       %td= legal.active
-      %td= link_to 'Show', [:adminboard, legal]
-      %td= link_to 'Edit', edit_adminboard_legal_path(legal)
-      %td= link_to 'Destroy', [:adminboard, legal], :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to "Show", [:adminboard, legal]
+      %td= link_to "Edit", edit_adminboard_legal_path(legal)
+      %td= link_to "Destroy", [:adminboard, legal], :method => :delete, :data => { :confirm => "Are you sure?" }
 
 %br
 
-= link_to 'New Legal', new_adminboard_legal_path
+= link_to "New Legal", new_adminboard_legal_path
