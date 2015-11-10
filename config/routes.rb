@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     root to: "home#show"
     resource :home
     resource :branding
-    resources :legal
+    resources :legal_sections
     resources :administrators
     resources :sessions, only: [:new, :create, :destroy]
     resources :password_resets, except: [:show, :destroy, :index]

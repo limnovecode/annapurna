@@ -3,6 +3,7 @@ class CreateAdministrators < ActiveRecord::Migration
     create_table :administrators do |t|
       t.string :slug
       t.string :email
+      t.string :username
       t.string :password_digest
       t.string :authentication_token
       t.string :reset_password_token

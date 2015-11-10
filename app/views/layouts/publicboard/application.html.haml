@@ -15,10 +15,29 @@
     = stylesheet_link_tag "publicboard/application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "publicboard/application", "data-turbolinks-track" => true, async: true
     = csrf_meta_tags
+    :css
+      html{background-color:#0e0215;}
+      body{color:#0e0215;background-color:#901ad8;font-family:Helvetica,Arial,Sans-serif;font-size:18px;}
+      body .universal{width:100%}
+      body, body .universal, body .universal .placeholder{margin:0 auto}
+      body .universal .placeholder .wrap{display:block;float:left;width:inherit;margin:0 auto}
+
   %body
-    .universal
+    %header.universal
+      .placeholder
+        .wrap
+          .row12Left
+        .clear
+
+    %main.universal
       .placeholder
         .wrap
           .row12Left
             = yield
+        .clear
+
+    %footer.universal
+      .placeholder
+        .wrap
+          .row12Left
         .clear

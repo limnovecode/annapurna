@@ -17,36 +17,4 @@
 //  Elements
 //
 
-html {
-  color: $purple30;
-  background-color: $purple30;
-}
-
-body {
-  color: $purple30;
-  background-color: $purple00;
-  margin: 0 auto;
-  font-family: Helvetica, Arial, Sans-serif;
-  font-size: 18px;
-
-  .universal {
-    width: 100%;
-    margin: 0 auto;
-
-    .placeholder {
-      margin: 0 auto;
-
-      .wrap {
-        @include floatLeft;
-        width: inherit;
-        margin: 0 auto;
-      }
-    }
-  }
-}
-
-//
-//  MUST STAY ON LOWER LEVEL
-//
-
 @import "publicboard/partials/mediaQueries";

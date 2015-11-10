@@ -6,8 +6,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   layout :layout_to_render
-  respond_to :html
-  responders :flash
 
   private
 

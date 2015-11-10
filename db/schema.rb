@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20151103113602) do
   create_table "administrators", force: :cascade do |t|
     t.string   "slug",                   limit: 255
     t.string   "email",                  limit: 255
+    t.string   "username",               limit: 255
     t.string   "password_digest",        limit: 255
     t.string   "authentication_token",   limit: 255
     t.string   "reset_password_token",   limit: 255
@@ -29,11 +30,14 @@ ActiveRecord::Schema.define(version: 20151103113602) do
   add_index "administrators", ["reset_password_token"], name: "index_administrators_on_reset_password_token", unique: true, using: :btree
   add_index "administrators", ["slug"], name: "index_administrators_on_slug", unique: true, using: :btree
 
-  create_table "legal", force: :cascade do |t|
+  create_table "legal_sections", force: :cascade do |t|
+    t.string   "slug",       limit: 255
     t.string   "title",      limit: 255
-    t.boolean  "active"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.boolean  "active",                 default: true
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
   end
+
+  add_index "legal_sections", ["slug"], name: "index_legal_sections_on_slug", unique: true, using: :btree
 
 end
